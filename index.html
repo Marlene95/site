@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Acesso Privado</title>
+  <style>
+    body { 
+      background-color: #f4f4f4; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      font-family: sans-serif;
+    }
+    .login {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #005bbb;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #003f7d;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <h2>Login Privado</h2>
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+    <p id="mensagem" style="color:red;"></p>
+  </div>
+
+  <script>
+    function login() {
+      const usuario = document.getElementById('usuario').value;
+      const senha = document.getElementById('senha').value;
+
+      if(usuario === "admin" && senha === "1234") {
+        window.location.href = "conteudo.html";
+      } else {
+        document.getElementById('mensagem').innerText = "Usuário ou senha incorretos!";
+      }
+    }
+  </script>
+</body>
+</html>
