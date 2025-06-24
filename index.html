@@ -43,7 +43,7 @@
 </head>
 <body>
   <div class="login">
-    <h2>Login Privado</h2>
+    <h2>Chefe de Pessoal</h2>
     <input type="text" id="usuario" placeholder="Usuário">
     <input type="password" id="senha" placeholder="Senha">
     <button onclick="login()">Entrar</button>
@@ -55,7 +55,7 @@
       const usuario = document.getElementById('usuario').value;
       const senha = document.getElementById('senha').value;
 
-      if(usuario === "admin" && senha === "1234") {
+      if(usuario === "Chefe" && senha === "2030") {
         window.location.href = "conteudo.html";
       } else {
         document.getElementById('mensagem').innerText = "Usuário ou senha incorretos!";
